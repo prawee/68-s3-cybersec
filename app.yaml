@@ -1,0 +1,13 @@
+services:
+  s3app:
+    image: prawee/strapi
+    container_name: 68-s3-app
+    ports:
+      - "${APP_PORT}:1337"
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: ${DATABASE_USER}
+      DATABASE_PASSWORD: "${DATABASE_PASS}"
