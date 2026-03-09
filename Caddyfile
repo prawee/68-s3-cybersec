@@ -1,0 +1,9 @@
+:80 {
+    # Proxy all traffic to the Strapi app
+    reverse_proxy s3app:1337
+
+    # Example: If you want to run pgAdmin on a subpath, uncomment below
+    # handle_path /pgadmin* {
+    #     reverse_proxy s3admin:80
+    # }
+}
